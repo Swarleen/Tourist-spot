@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Trip Planner</title>
+	<!-- CSS Import -->
+	<link rel="stylesheet" href="planner.css" />
+	<!-- End of CSS Import -->
+	<!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,700;0,900;1,400&family=Montserrat:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+	<!-- End of Fonts -->
+</head>
+<body>
+    <main class="app">
+        <section class="greeting">
+            <h2 class="title">
+                Hey! Hope you have a nice trip, <input type="text" id="name" placeholder="Enter Name" />
+            </h2>
+        </section>
+        <section class="create-plan">
+            <h3>PLAN A TRIP</h3>
+            <form id="new-plan-form">
+                <h4>What's on your mind?</h4>
+                <input type="text" name="content" id="content" placeholder="e.g. Go to Sukhna Lake">
+                <h4>Pick a category</h4>
+                <div class="options">
+
+                    <label>
+                        <input type="radio" name="category" id="category1" value="places"/>
+                        <span class="bubble places"></span>
+                        <div>Places to visit</div>
+                    </label>
+
+                    <label>
+                        <input type="radio" name="category" id="category2" value="things"/>
+                        <span class="bubble things"></span>
+                        <div>Things to do</div>
+                    </label>
+
+                </div>  
+                <input type="submit" value="Add"/>          
+            </form>
+        </section>
+
+        <section class="my-plans">
+            <h3>My Plans</h3>
+            <div class="plans" id="my-plans">
+                <!-- <div class="plan-1 done">
+                    <label>
+                        <input type="checkbox"/>
+                        <span class="bubble places"></span>
+                    </label>
+
+                    <div class="plan-content">
+                        <input type="text" value="Go to lake" readonly/>
+                    </div>
+
+                    <div class="actions">
+                        <button class="edit">Edit</button>
+                        <button class="delete">Delete</button>
+                    </div>
+                </div>
+
+
+                <div class="plan-1">
+                    <label>
+                        <input type="checkbox"/>
+                        <span class="bubble things"></span>
+                    </label>
+
+                    <div class="plan-content">
+                        <input type="text" value="Do Boating" readonly/>
+                    </div>
+
+                    <div class="actions">
+                        <button class="edit">Edit</button>
+                        <button class="delete">Delete</button>
+                    </div>
+                </div> -->
+
+            </div>
+        </section>
+    </main>
+
+
+
+
+
+    <script src="planner.js"></script>
+</body>

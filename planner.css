@@ -1,0 +1,235 @@
+:root {
+	--primary: rgb(13, 5, 32);
+	--places: rgba(252, 99, 10, 0.801);
+	--things: var(--primary);
+	--light: rgb(13, 5, 32);
+	--grey: rgb(219, 200, 200);
+	--dark: rgba(241, 235, 233, 0.945);
+	--danger: #d62825;
+
+	--shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+
+	--places-glow: 0px 0px 4px rgba(252, 99, 10, 0.801);
+	--things-glow: 0px 0px 4px rgb(13, 5, 32);
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+input:not([type="radio"]):not([type="checkbox"]), button{
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: initial;
+}
+
+body{
+    background: var(--light);
+    color: var(--dark);
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(Canva_planner.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+section{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding-left: 2.5rem;
+    padding-right: 38.5rem;
+}
+
+h3{
+    color: var(--dark);
+    font-size: 2rem;
+    font-weight: 600;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+    margin-bottom:0.5rem;
+}
+
+h4{
+    color: var(--grey);
+    font-size: 0.875rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.greeting .title{
+    display: flex;
+}
+
+.greeting .title input{
+    margin-left: 0.5rem;
+    flex:1 1 0%;
+    min-width: 0;
+}
+
+.greeting .title,
+.greeting .title input{
+    color: var(--dark);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.create-plan input[type="text"] {
+    display: block;
+    width:100%;
+    font-size: 1.125rem;
+    padding: 1rem 1.5rem;
+    color: var(--dark);
+    background-color: rgb(197, 192, 201);
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow);
+    margin-bottom: 1.5rem;
+
+}
+
+.create-plan .options{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.create-plan .options label {
+    display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+    padding: 1.5rem;
+	background-color: rgba(197, 192, 201, 0.548);
+	border-radius: 0.5rem;
+	box-shadow: var(--shadow);
+	cursor: pointer;
+}
+
+input[type="radio"],
+input[type="checkbox"]{
+    display:none;
+}
+
+.bubble{
+    display:flex;
+    align-items: center; 
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius:50%;
+    border: 2px solid var(--places);
+    box-shadow: var(--places-glow);
+}
+
+.bubble.things {
+    border-color:var(--things);
+    box-shadow: var(--things-glow);
+}
+
+.bubble::after{
+    content: "";
+    display: block;
+    opacity: 0;
+    width: 0px;
+    height: 0px;
+    background-color: var(--places);
+    box-shadow: var(--places-glow);
+    border-radius: 50%;
+    transition: 0.2s ease-in-out;
+}
+
+.bubble.things::after{
+    background-color: var(--things);
+    box-shadow: var(--things-glow);
+}
+
+input:checked ~ .bubble::after {
+    width:10px;
+    height:10px;
+    opacity: 1;
+}
+
+.create-plan .options label div{
+    color: var(--dark);
+    font-size: 1.125rem;
+    margin-top: 1rem;
+}
+
+.create-plan input[type="submit"]{
+    display: block;
+    width: 100%;
+    font-size: 1.125rem;
+    padding: 1rem 1.5rem;
+    color:#FFF;
+    background-color: var(--things);
+    border-radius: 0.5rem;
+    box-shadow: var(--things-glow);
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.create-plan input[type="submit"] :hover{
+    opacity: 0.7s;
+}
+
+.my-plans .list{
+    margin: 1rem 0;
+}
+
+.my-plans .plan-1{
+    display: flex;
+    align-items: center;
+    background-color:rgb(197, 192, 201);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow);
+    margin-bottom: 1rem;
+}
+
+.plan-1 label{
+    display: block;
+    margin-right: 1rem;
+    cursor: pointer;    
+}
+
+.plan-1 .plan-content{
+    flex: 1 1 0%;
+}
+
+.plan-1 .plan-content input{
+    color: var(--light);
+    font-size: 1.125rem;
+}
+
+.plan-1 .actions{
+    display: flex;
+    align-items: centre;
+}
+
+.plan-1 .actions button{
+    display: block;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    color:#FFF;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.plan-1 .actions button:hover{
+    opacity: 0.75;
+}
+
+.plan-1 .actions .edit{
+    margin-right: 0.5rem;
+    background-color: var(--primary);
+}
+
+.plan-1 .actions .delete{
+    background-color: var(--danger);
+}
+
+.plan-1.done .plan-content input{
+    text-decoration: line-through;
+    color: var(--light);
+}

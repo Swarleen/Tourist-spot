@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+body{
+    background-color: rgb(13, 5, 32);
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(helpdesk_background.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 110vh;
+    margin: 0;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.num_table{
+    padding: 60px 100px;
+}
+article h1{
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.938);
+}
+.helpdesk{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 100;
+}
+table{
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 60%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-radius: 12px 12px 0 0;
+    overflow: hidden;
+    box-shadow: 0 12px 5px rgba(32,32,32,.3);
+    background: #fff;
+    text-align: center;
+}
+th,td{
+    padding: 5px 12px;
+}
+th{
+    background: rgb(13, 5, 32);
+    color: #fafafa;
+    text-transform: uppercase;
+}
+td{
+    font-family: sans-serif;
+}
+tr:nth-child(odd){
+    background-color: #d2ced6dc;
+}
+.imp_links{
+    text-align: center;
+
+}
+blockquote{
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 12px;
+    margin-top: 350px;
+
+    color: #fff;
+}
+blockquote h2{
+    padding: 7px;
+}
+a{
+    display: grid;
+    height: 30px;
+    width: 100px;
+    background: rgb(13, 5, 32);
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    place-items: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    text-decoration: none;
+    letter-spacing: 1.5px;
+    border-radius: 5px;
+
+}
